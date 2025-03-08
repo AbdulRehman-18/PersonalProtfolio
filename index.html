@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=96&id=xlA01qiKsr2C&format=png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar styles */
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Pulse animation for contact cards */
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(139, 92, 246, 0.3); }
+            50% { border-color: rgba(236, 72, 153, 0.5); }
+        }
+        .pulse-border {
+            animation: pulse-border 3s infinite;
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-black p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-500">ദ്ദി(⎚_⎚)</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-violet-400 transition">Home</a>
+                <a href="#about" class="hover:text-violet-400 transition">About</a>
+                <a href="#projects" class="hover:text-violet-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-violet-400 transition">Skills</a>
+                <a href="#contact" class="hover:text-violet-400 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-12 md:py-20 bg-black">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-wide">
+                    Hi, I'm 
+                    <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-violet-600 drop-shadow-lg">
+                    Abdul Rehman
+                    </span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-6 md:mb-8">Java Developer || Frontend Developer & Problem Solver</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-5 py-3 bg-gradient-to-r from-pink-500 to-violet-600 rounded-lg hover:opacity-90 transition text-sm sm:text-base">Contact Me</a>
+                    <a href="#projects" class="px-5 py-3 border border-violet-500 rounded-lg hover:bg-violet-500/10 transition text-sm sm:text-base">View Work</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+                <!-- Code Block from original design -->
+                <div class="rounded-lg select-none border border-slate-700 relative w-full max-w-[900px] overflow-hidden">
+                    <!-- Gradient Border -->
+                    <div class="flex flex-row">
+                        <div class="h-[1px] bg-gradient-to-r from-transparent via-pink-500 to-violet-600 w-full"></div>
+                        <div class="h-[1px] bg-gradient-to-r from-violet-600 to-transparent w-full"></div>
+                    </div>
+                    <!-- Window Buttons -->
+                    <div class="px-4 sm:px-8 py-3 sm:py-5 flex flex-row space-x-2">
+                        <div class="rounded-full bg-red-600 w-3 h-3"></div>
+                        <div class="rounded-full bg-yellow-400 w-3 h-3"></div>
+                        <div class="rounded-full bg-green-600 w-3 h-3"></div>
+                    </div>
+                    <!-- Code Block -->
+                    <div class="px-6 sm:px-10 py-6 sm:py-10 border-t-[2px] border-slate-800 overflow-x-auto">
+                        <pre class="text-white font-mono text-xs sm:text-sm leading-relaxed">
+<span class="text-pink-500">const</span> <span class="text-white">coder</span> <span class="text-pink-500">=</span> <span class="text-gray-400">{</span>
+    <span class="text-white ml-8">name:</span> <span class="text-gray-400">'</span><span class="text-amber-300">Abdul Rehman</span><span class="text-gray-400">',</span>
+    <span class="text-white ml-8">skills:</span> <span class="text-gray-400">['</span><span class="text-amber-300">Java</span><span class="text-gray-400">', '</span><span class="text-amber-300">React Js</span><span class="text-gray-400">', '</span><span class="text-amber-300">Python</span><span class="text-gray-400">', '</span><span class="text-amber-300">JavaScript</span><span class="text-gray-400">'],</span>
+    <span class="text-white ml-8">hardWorker:</span> <span class="text-orange-400">true</span><span class="text-gray-400">,</span>
+    <span class="text-white ml-8">problemSolver:</span> <span class="text-orange-400">true</span><span class="text-gray-400">,</span>
+    <span class="text-green-400 ml-8">hireable:</span> <span class="text-orange-400">function</span> <span class="text-gray-400">() {</span>
+        <span class="text-orange-400 ml-16">return</span> <span class="text-gray-400">(</span>
+            <span class="text-cyan-400 ml-24">this.</span><span class="text-white">hardWorker</span> <span class="text-amber-300">&amp;&amp;</span>
+            <span class="text-cyan-400 ml-24">this.</span><span class="text-white">problemSolver</span> <span class="text-amber-300">&amp;&amp;</span>
+            <span class="text-cyan-400 ml-24">this.</span><span class="text-white">skills.length</span> <span class="text-amber-300">&gt;=</span> <span class="text-orange-400">5</span>
+        <span class="text-gray-400">);</span>
+    <span class="text-gray-400 ml-8">}</span>
+<span class="text-gray-400">}</span>;
+
+<span class="text-pink-500">console</span><span class="text-gray-400">.</span><span class="text-white">log</span><span class="text-gray-400">(</span><span class="text-white">coder</span><span class="text-gray-400">.</span><span class="text-white">hireable</span><span class="text-gray-400">()); </span><span class="text-green-400">// true</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-8 md:mb-12 text-center">About <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600">Me</span></h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="relative w-40 h-40 sm:w-64 sm:h-64 mx-auto">
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 blur-lg opacity-70"></div>
+                        <div class="absolute inset-1 rounded-full bg-gray-800 overflow-hidden">
+                            <!-- Replace icon with actual image - add your image URL below -->
+                            <img src="/Profile.jpg" alt="Abdul Rehman" class="w-auto h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm sm:text-base">
+                        I'm Abdul Rehman,a passionate software developer skilled in Java, Python, React, and JavaScript. I love building scalable applications, solving complex problems, and crafting seamless user experiences. Always eager to learn and innovate, I strive to write clean, efficient code that makes an impact. Let’s build something amazing together!
+                    </p>
+                    <p class="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm sm:text-base">
+                                             
+                    </p>
+                    <p class="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm sm:text-base">
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-xl sm:text-2xl text-gray-400 hover:text-pink-500 transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-xl sm:text-2xl text-gray-400 hover:text-pink-500 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-xl sm:text-2xl text-gray-400 hover:text-pink-500 transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-black relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-r from-pink-500/10 to-violet-600/10 rounded-full blur-3xl opacity-70"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-gradient-to-r from-violet-600/10 to-pink-500/10 rounded-full blur-3xl opacity-70"></div>
+        <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-violet-600/5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header with Animation -->
+            <div class="flex flex-col items-center mb-20 relative">
+                <div class="inline-block relative mb-2">
+                    <span class="text-xs font-semibold tracking-widest text-violet-400 uppercase">Portfolio</span>
+                </div>
+                <h2 class="text-5xl font-bold text-center relative inline-block mb-4">
+                    <span class="relative z-10">My</span> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600 relative z-10">Projects</span>
+                    <div class="absolute -bottom-2 left-0 h-1 w-0 bg-gradient-to-r from-pink-500 to-violet-600 group-hover:w-full transition-all duration-700 animate-[width_1.5s_ease-in-out_forwards]"></div>
+                </h2>
+                <p class="text-gray-400 max-w-xl text-center mt-4 text-lg">Explore my latest work and creative solutions</p>
+            </div>
+            
+            <!-- Modern Asymmetrical Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 auto-rows-fr">
+                <!-- Project 1 - Large Feature Project -->
+                <div class="md:col-span-8 md:row-span-2 group relative">
+                    <div class="relative overflow-hidden rounded-xl h-full min-h-[300px] sm:min-h-[400px] transform transition-all duration-500 group-hover:scale-[0.98] shadow-lg shadow-violet-900/10">
+                        <!-- Project Background with Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-black border border-gray-800 group-hover:border-violet-500/50 transition-all duration-500"></div>
+                        
+                        <!-- Project Icon with Animation -->
+                        <div class="absolute top-6 right-6 w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center transform transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+                            <i class="fas fa-code text-3xl text-gray-500 group-hover:text-violet-400 transition-all duration-500"></i>
+                        </div>
+                        
+                        <!-- Project Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            
+                            <h3 class="text-2xl font-bold mb-0 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-500">Personal Expense Tracker</h3>
+
+                            <p class="text-gray-400 mb-6 max-w-lg transform transition-all duration-500 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">This console-based application allows you to add, view, and organize your financial records with an intuitive menu-driven interface.</p>
+                            
+                            <!-- Tech Stack with Animated Appearance -->
+                            <div class="flex flex-wrap gap-2 mb-6 transform transition-all duration-700 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="px-3 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Java</span>
+                               
+                                <span class="px-3 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">MongoDB</span>
+                            </div>
+                            
+                            <!-- Project Link with Animation -->
+                            <a href="https://github.com/AbdulRehman-18/Personal-Expense-Tracker.git" class="inline-flex items-center text-sm font-medium text-white hover:text-violet-400 transition-all duration-300 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="mr-2">View Project</span>
+                                <span class="relative inline-flex h-3 w-3 rounded-full bg-violet-500 animate-ping opacity-75 group-hover:opacity-100"></span>
+                                <i class="fas fa-arrow-right ml-2 transform transition-all duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Medium Size -->
+                <div class="md:col-span-4 group relative">
+                    <div class="relative overflow-hidden rounded-xl h-full min-h-[250px] transform transition-all duration-500 group-hover:scale-[0.98] shadow-lg shadow-violet-900/10">
+                        <!-- Project Background with Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-black border border-gray-800 group-hover:border-violet-500/50 transition-all duration-500"></div>
+                        
+                        <!-- Project Icon with Animation -->
+                        <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center transform transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+                            <i class="fas fa-mobile-alt text-2xl text-gray-500 group-hover:text-violet-400 transition-all duration-500"></i>
+                        </div>
+                        
+                        <!-- Project Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <h3 class="text-xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-500">Fitness Tracking App</h3>
+                            <p class="text-gray-400 mb-4 text-sm transform transition-all duration-500 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Mobile application for tracking workouts, nutrition, and progress.</p>
+                            
+                            <!-- Tech Stack with Animated Appearance -->
+                            <div class="flex flex-wrap gap-2 mb-4 transform transition-all duration-700 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">React Native</span>
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Firebase</span>
+                            </div>
+                            
+                            <!-- Project Link with Animation -->
+                            <a href="#" class="inline-flex items-center text-xs font-medium text-white hover:text-violet-400 transition-all duration-300 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="mr-2">View Project</span>
+                                <i class="fas fa-arrow-right ml-1 transform transition-all duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Medium Size -->
+                <div class="md:col-span-4 group relative">
+                    <div class="relative overflow-hidden rounded-xl h-full min-h-[250px] transform transition-all duration-500 group-hover:scale-[0.98] shadow-lg shadow-violet-900/10">
+                        <!-- Project Background with Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-black border border-gray-800 group-hover:border-violet-500/50 transition-all duration-500"></div>
+                        
+                        <!-- Project Icon with Animation -->
+                        <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center transform transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+                            <i class="fas fa-hashtag text-2xl text-gray-500 group-hover:text-violet-400 transition-all duration-500"></i>
+                        </div>
+                        
+                        
+                        <!-- Project Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <h3 class="text-xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-500">Number Guessing Game</h3>
+                            <p class="text-gray-400 mb-4 text-sm transform transition-all duration-500 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">This Java-based game allows players to guess a randomly generated number within a specified range and difficulty level.</p>
+                            
+                            <!-- Tech Stack with Animated Appearance -->
+                            <div class="flex flex-wrap gap-2 mb-4 transform transition-all duration-700 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Java Swing</span>
+                               
+                            </div>
+                            
+                            <!-- Project Link with Animation -->
+                            <a href="https://github.com/AbdulRehman-18/NumberGuessingGame.git" class="inline-flex items-center text-xs font-medium text-white hover:text-violet-400 transition-all duration-300 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="mr-2">View Project</span>
+                                <i class="fas fa-arrow-right ml-1 transform transition-all duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 - Medium Size -->
+                <div class="md:col-span-4 group relative">
+                    <div class="relative overflow-hidden rounded-xl h-full min-h-[250px] transform transition-all duration-500 group-hover:scale-[0.98] shadow-lg shadow-violet-900/10">
+                        <!-- Project Background with Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-black border border-gray-800 group-hover:border-violet-500/50 transition-all duration-500"></div>
+                        
+                        <!-- Project Icon with Animation -->
+                        <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center transform transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+                            <i class="fas fa-robot text-2xl text-gray-500 group-hover:text-violet-400 transition-all duration-500"></i>
+                        </div>
+                        
+                        <!-- Project Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <h3 class="text-xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-500">Student Code Assistant</h3>
+                            <p class="text-gray-400 mb-4 text-sm transform transition-all duration-500 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Intelligent conversational agent with natural language processing capabilities for Student support.</p>
+                            
+                            <!-- Tech Stack with Animated Appearance -->
+                            <div class="flex flex-wrap gap-2 mb-4 transform transition-all duration-700 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Python</span>
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">TensorFlow</span>
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">GCP</span>
+                            </div>
+                            
+                            <!-- Project Link with Animation -->
+                            <a href="#" class="inline-flex items-center text-xs font-medium text-white hover:text-violet-400 transition-all duration-300 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="mr-2">View Project</span>
+                                <i class="fas fa-arrow-right ml-1 transform transition-all duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 - Large Size -->
+                <div class="md:col-span-8 group relative">
+                    <div class="relative overflow-hidden rounded-xl h-full min-h-[250px] transform transition-all duration-500 group-hover:scale-[0.98] shadow-lg shadow-violet-900/10">
+                        <!-- Project Background with Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-black border border-gray-800 group-hover:border-violet-500/50 transition-all duration-500"></div>
+                        
+                        <!-- Project Icon with Animation -->
+                        <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center transform transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+                            <i class="fas fa-gamepad text-2xl text-gray-500 group-hover:text-violet-400 transition-all duration-500"></i>
+                        </div>
+                        
+                        <!-- Project Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <h3 class="text-xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-500">Multiplayer Game Platform</h3>
+                            <p class="text-gray-400 mb-4 text-sm transform transition-all duration-500 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Real-time multiplayer gaming platform with matchmaking, leaderboards, and social features.</p>
+                            
+                            <!-- Tech Stack with Animated Appearance -->
+                            <div class="flex flex-wrap gap-2 mb-4 transform transition-all duration-700 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Unity</span>
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Socket.io</span>
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Node.js</span>
+                            </div>
+                            
+                            <!-- Project Link with Animation -->
+                            <a href="#" class="inline-flex items-center text-xs font-medium text-white hover:text-violet-400 transition-all duration-300 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="mr-2">View Project</span>
+                                <i class="fas fa-arrow-right ml-1 transform transition-all duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 - Medium Size -->
+                <div class="md:col-span-4 group relative">
+                    <div class="relative overflow-hidden rounded-xl h-full min-h-[250px] transform transition-all duration-500 group-hover:scale-[0.98] shadow-lg shadow-violet-900/10">
+                        <!-- Project Background with Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-black border border-gray-800 group-hover:border-violet-500/50 transition-all duration-500"></div>
+                        
+                        <!-- Project Icon with Animation -->
+                        <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center transform transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+                            <i class="fas fa-lock text-2xl text-gray-500 group-hover:text-violet-400 transition-all duration-500"></i>
+                        </div>
+                        
+                        <!-- Project Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <h3 class="text-xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-500">Secure Password Manager</h3>
+                            <p class="text-gray-400 mb-4 text-sm transform transition-all duration-500 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">End-to-end encrypted password management solution with cross-platform synchronization.</p>
+                            
+                            <!-- Tech Stack with Animated Appearance -->
+                            <div class="flex flex-wrap gap-2 mb-4 transform transition-all duration-700 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">Electron</span>
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">React</span>
+                                <span class="px-2 py-1 bg-gradient-to-r from-pink-500/20 to-violet-600/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-pink-500/10">WebCrypto</span>
+                            </div>
+                            
+                            <!-- Project Link with Animation -->
+                            <a href="#" class="inline-flex items-center text-xs font-medium text-white hover:text-violet-400 transition-all duration-300 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="mr-2">View Project</span>
+                                <i class="fas fa-arrow-right ml-1 transform transition-all duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-8 md:mb-12 text-center">My <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600">Skills</span></h2>
+            <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"> -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 justify-center items-center mx-auto max-w-5xl">
+
+                <!-- Frontend -->
+                <div class="bg-black p-4 sm:p-6 rounded-lg border border-gray-700 hover:border-violet-500 transition">
+                    <div class="text-center mb-3 sm:mb-4">
+                        <i class="fas fa-code text-3xl sm:text-4xl text-violet-400 mb-2 sm:mb-3"></i>
+                        <h3 class="text-base sm:text-lg font-semibold">Frontend</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm sm:text-base text-gray-300">React</span>
+                            <div class="w-1/2 sm:w-2/3 bg-black rounded-full h-1.5 sm:h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-1.5 sm:h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm sm:text-base text-gray-300">Vue.js</span>
+                            <div class="w-1/2 sm:w-2/3 bg-black rounded-full h-1.5 sm:h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-1.5 sm:h-2 rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm sm:text-base text-gray-300">CSS/SCSS</span>
+                            <div class="w-1/2 sm:w-2/3 bg-black rounded-full h-1.5 sm:h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-1.5 sm:h-2 rounded-full" style="width: 73%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="bg-black p-6 rounded-lg border border-gray-700 hover:border-violet-500 transition">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-server text-4xl text-violet-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold">Backend</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Node.js</span>
+                            <div class="w-2/3 bg-black rounded-full h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-2 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Python</span>
+                            <div class="w-2/3 bg-black rounded-full h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-2 rounded-full" style="width: 59%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Java</span>
+                            <div class="w-2/3 bg-black rounded-full h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Database -->
+                <div class="bg-black p-6 rounded-lg border border-gray-700 hover:border-violet-500 transition">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-database text-4xl text-violet-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold">Database</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">MongoDB</span>
+                            <div class="w-2/3 bg-black rounded-full h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">MYSQL</span>
+                            <div class="w-2/3 bg-black rounded-full h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-2 rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Firebase</span>
+                            <div class="w-2/3 bg-black rounded-full h-2">
+                                <div class="bg-gradient-to-r from-pink-500 to-violet-600 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-start justify-between mb-10 md:mb-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold">Let's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600">Connect</span></h2>
+                    <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-violet-600 mt-3 md:mt-4"></div>
+                </div>
+                <p class="text-gray-400 md:w-1/3 mt-6 md:mt-0 text-sm sm:text-base">Have a project in mind or just want to say hello? Drop me a message and I'll get back to you soon.</p>
+            </div>
+            <br>
+            <div class="flex flex-col md:flex-row gap-10 md:gap-16">
+                <!-- Contact Form -->
+                <div class="md:w-5/12">
+                    <form class="space-y-6 md:space-y-8">
+                        <div class="relative group">
+                            <input type="text" id="name" required class="w-full bg-transparent border-b border-gray-700 py-3 md:py-4 px-0 text-white focus:outline-none focus:border-pink-500 transition-all duration-300 peer text-sm sm:text-base">
+                            <label for="name" class="absolute left-0 -top-6 text-gray-400 transition-all duration-300 group-focus-within:text-pink-500 text-sm sm:text-base">Your Name</label>
+                            <div class="h-0.5 w-0 bg-gradient-to-r from-pink-500 to-violet-600 transition-all duration-300 group-focus-within:w-full"></div>
+                        </div>
+                        
+                        <div class="relative group">
+                            <input type="email" id="email" required class="w-full bg-transparent border-b border-gray-700 py-3 md:py-4 px-0 text-white focus:outline-none focus:border-pink-500 transition-all duration-300 peer text-sm sm:text-base">
+                            <label for="email" class="absolute left-0 -top-6 text-gray-400 transition-all duration-300 group-focus-within:text-pink-500 text-sm sm:text-base">Your Email</label>
+                            <div class="h-0.5 w-0 bg-gradient-to-r from-pink-500 to-violet-600 transition-all duration-300 group-focus-within:w-full"></div>
+                        </div>
+                        
+                        <div class="relative group">
+                            <textarea id="message" rows="4" required class="w-full bg-transparent border-b border-gray-700 py-3 md:py-4 px-0 text-white focus:outline-none focus:border-pink-500 transition-all duration-300 peer resize-none text-sm sm:text-base"></textarea>
+                            <label for="message" class="absolute left-0 -top-6 text-gray-400 transition-all duration-300 group-focus-within:text-pink-500 text-sm sm:text-base">Your Message</label>
+                            <div class="h-0.5 w-0 bg-gradient-to-r from-pink-500 to-violet-600 transition-all duration-300 group-focus-within:w-full"></div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <button type="submit" class="group relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 bg-transparent rounded-full border border-violet-500 text-white font-medium hover:border-transparent transition-all duration-300 text-sm sm:text-base">
+                                <span class="relative z-10">Send Message</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-violet-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="md:w-auto mt-10 md:mt-0">
+                    <div class="flex flex-col gap-4">
+                        <!-- Modern Contact Cards Container -->
+                        <div class="overflow-x-auto pb-4 -mx-4 px-4 hide-scrollbar">
+                            <div class="flex flex-nowrap gap-4 w-max md:w-auto md:grid md:grid-cols-2 md:gap-6">
+                                <!-- Location Card -->
+                                <div class="w-[280px] md:w-auto backdrop-blur-md bg-gradient-to-br from-pink-500/10 to-violet-600/10 border border-gray-800 rounded-2xl p-5 flex items-center gap-4 group hover:border-violet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10">
+                                    <div class="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500/30 to-violet-600/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                                        <i class="fas fa-map-marker-alt text-xl text-violet-400 group-hover:text-white transition-colors"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-300">Location</h4>
+                                        <p class="text-gray-400">Karnataka, INDIA</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Email Card -->
+                                <div class="w-[auto] md:w-auto backdrop-blur-md bg-gradient-to-br from-pink-500/10 to-violet-600/10 border border-gray-800 rounded-2xl p-5 flex items-center gap-4 group hover:border-violet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10">
+                                    <div class="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500/30 to-violet-600/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                                        <i class="fas fa-envelope text-xl text-violet-400 group-hover:text-white transition-colors"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-300">Email</h4>
+                                        <p class="text-gray-400">asteroidtech23@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Phone Card -->
+                                <div class="w-[280px] md:w-auto backdrop-blur-md bg-gradient-to-br from-pink-500/10 to-violet-600/10 border border-gray-800 rounded-2xl p-5 flex items-center gap-4 group hover:border-violet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10">
+                                    <div class="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500/30 to-violet-600/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                                        <i class="fas fa-phone text-xl text-violet-400 group-hover:text-white transition-colors"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-300">Phone</h4>
+                                        <p class="text-gray-400">+91 1234567890</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Social Card -->
+                                <div class="w-[auto] md:w-auto backdrop-blur-md bg-gradient-to-br from-pink-500/10 to-violet-600/10 border border-gray-800 rounded-2xl p-5 flex items-center gap-4 group hover:border-violet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10">
+                                    <div class="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500/30 to-violet-600/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                                        <i class="fas fa-share-alt text-xl text-violet-400 group-hover:text-white transition-colors"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-600 transition-all duration-300">Social</h4>
+                                        <div class="flex space-x-4 mt-2">
+                                <a href="#" class="h-9 w-9 rounded-full bg-gradient-to-r from-pink-500/20 to-violet-600/20 flex items-center justify-center hover:from-pink-500/40 hover:to-violet-600/40 transition-all duration-300">
+                                    <i class="fab fa-github text-violet-400"></i>
+                                </a>
+                                <a href="#" class="h-9 w-9 rounded-full bg-gradient-to-r from-pink-500/20 to-violet-600/20 flex items-center justify-center hover:from-pink-500/40 hover:to-violet-600/40 transition-all duration-300">
+                                    <i class="fab fa-linkedin text-violet-400"></i>
+                                </a>
+                                <a href="#" class="h-9 w-9 rounded-full bg-gradient-to-r from-pink-500/20 to-violet-600/20 flex items-center justify-center hover:from-pink-500/40 hover:to-violet-600/40 transition-all duration-300">
+                                    <i class="fab fa-twitter text-violet-400"></i>
+                                </a>
+                                <a href="#" class="h-9 w-9 rounded-full bg-gradient-to-r from-pink-500/20 to-violet-600/20 flex items-center justify-center hover:from-pink-500/40 hover:to-violet-600/40 transition-all duration-300">
+                                    <i class="fab fa-instagram text-violet-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-6 sm:py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <div class="text-gray-400 text-sm sm:text-base">
+                &copy; code with abdulrehman
+            </div>
+            <div class="flex space-x-4 sm:space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="flex space-x-3 sm:space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition text-xs sm:text-base">Terms of Use</a>
+                <a href="#" class="text-gray-400 hover:text-white transition text-xs sm:text-base">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.fa-bars').parentElement;
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center transform transition-transform duration-300 translate-x-full';
+            mobileMenu.innerHTML = `
+                <div class="relative w-full h-full flex flex-col items-center justify-center">
+                    <button class="absolute top-6 right-6 text-white text-2xl focus:outline-none p-2">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="flex flex-col space-y-8 text-center">
+                        <div class="mb-6">
+                            <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600 mb-2">DevPortfolio</div>
+                            <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-violet-600 mx-auto"></div>
+                        </div>
+                        <a href="#home" class="text-xl hover:text-violet-400 transition">Home</a>
+                        <a href="#about" class="text-xl hover:text-violet-400 transition">About</a>
+                        <a href="#projects" class="text-xl hover:text-violet-400 transition">Projects</a>
+                        <a href="#skills" class="text-xl hover:text-violet-400 transition">Skills</a>
+                        <a href="#contact" class="text-xl hover:text-violet-400 transition">Contact</a>
+                        <div class="flex space-x-4 justify-center mt-6">
+                            <a href="#" class="text-xl text-gray-400 hover:text-pink-500 transition"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-xl text-gray-400 hover:text-pink-500 transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-xl text-gray-400 hover:text-pink-500 transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(mobileMenu);
+            
+            // Toggle mobile menu
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden'); // Prevent scrolling when menu is open
+            });
+            
+            // Close mobile menu
+            const closeButton = mobileMenu.querySelector('.fa-times').parentElement;
+            closeButton.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+            
+            // Close menu when clicking on links
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
